@@ -14,12 +14,12 @@ class CatalogActivity : DaggerAppCompatActivity() {
     @Inject
     lateinit var viewModelFactory: ViewModelFactory
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val viewModel = ViewModelProviders.of(this, viewModelFactory)
                 .get(CatalogViewModel::class.java)
+        viewModel.addSubscriptions()
     }
 
 }

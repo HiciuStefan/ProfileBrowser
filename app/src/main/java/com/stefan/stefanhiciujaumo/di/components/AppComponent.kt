@@ -4,6 +4,7 @@ import android.app.Application
 import com.stefan.stefanhiciujaumo.ProfileBrowserApp
 import com.stefan.stefanhiciujaumo.di.modules.AppModule
 import com.stefan.stefanhiciujaumo.di.modules.CatalogComponent
+import com.stefan.stefanhiciujaumo.di.modules.NetworkModule
 import com.stefan.stefanhiciujaumo.di.modules.ViewModelModule
 import dagger.BindsInstance
 import dagger.Component
@@ -17,7 +18,8 @@ import javax.inject.Singleton
 AndroidSupportInjectionModule::class,
 AppModule::class,
 CatalogComponent::class,
-ViewModelModule::class
+ViewModelModule::class,
+NetworkModule::class
 ])
 
 @Singleton
