@@ -2,9 +2,9 @@ package com.stefan.stefanhiciujaumo.ui
 
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
-import com.hypnoweb.hypnowebapp.di.ViewModelFactory.ViewModelFactory
 import com.stefan.stefanhiciujaumo.R
 import com.stefan.stefanhiciujaumo.catalog.CatalogViewModel
+import com.stefan.stefanhiciujaumo.di.modules.ViewModelFactory
 import dagger.android.support.DaggerAppCompatActivity
 import javax.inject.Inject
 

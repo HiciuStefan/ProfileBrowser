@@ -7,7 +7,8 @@ import dagger.android.ContributesAndroidInjector
 
 
 @Module
-abstract class CatalogComponent {
+abstract class CatalogActivityModule {
+
     @ContributesAndroidInjector
     @ActivityKey(CatalogActivity::class)
     internal abstract fun buildCatalogActivity(): CatalogActivity
