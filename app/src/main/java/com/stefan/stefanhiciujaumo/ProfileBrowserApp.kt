@@ -1,6 +1,6 @@
 package com.stefan.stefanhiciujaumo
 
-import com.hypnoweb.hypnowebapp.di.components.DaggerAppComponent
+import com.stefan.stefanhiciujaumo.di.components.DaggerAppComponent
 import dagger.android.AndroidInjector
 import dagger.android.DaggerApplication
 

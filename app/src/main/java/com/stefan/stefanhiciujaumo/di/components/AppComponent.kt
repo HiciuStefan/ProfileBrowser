@@ -1,9 +1,10 @@
-package com.hypnoweb.hypnowebapp.di.components
+package com.stefan.stefanhiciujaumo.di.components
 
 import android.app.Application
 import com.stefan.stefanhiciujaumo.ProfileBrowserApp
 import com.stefan.stefanhiciujaumo.di.modules.AppModule
-import com.stefan.stefanhiciujaumo.di.modules.CatalogComponent
+import com.stefan.stefanhiciujaumo.di.modules.ContributeActivityModule
+import com.stefan.stefanhiciujaumo.di.modules.NetworkModule
 import com.stefan.stefanhiciujaumo.di.modules.ViewModelModule
 import dagger.BindsInstance
 import dagger.Component
@@ -16,8 +17,9 @@ import javax.inject.Singleton
 @Component(modules = [
 AndroidSupportInjectionModule::class,
 AppModule::class,
-CatalogComponent::class,
-ViewModelModule::class
+ContributeActivityModule::class,
+ViewModelModule::class,
+NetworkModule::class
 ])
 
 @Singleton
