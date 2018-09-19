@@ -40,7 +40,7 @@ fun setLoadingContentLoadingProgressBar(gridView: GridView?, catalog: Catalog?, 
 
 @BindingAdapter("src")
 fun setImage(imageView: ImageView?, url: String?) {
-    imageView?.let { Picasso.get().load(url).error(R.drawable.no_image).fit().into(imageView) }
+    imageView?.let { Picasso.get().load(url).error(R.drawable.no_image).fit().centerCrop().into(imageView) }
 }
 
 @BindingAdapter("visibility")

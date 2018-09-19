@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="person"
+            type="com.stefan.stefanhiciujaumo.catalog.Person" />
+    </data>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:src="@{person.photoUrl}"
+            tools:src="@drawable/no_image" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/profile_bottom_text_padding"
+            android:text="@{person.username}"
+            android:textSize="@dimen/profile_person_name_text_size"
+            app:layout_constraintBottom_toTopOf="@+id/profile_years_text"
+            tools:text="lazyduck408" />
+
+        <TextView
+            android:id="@+id/profile_years_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/profile_bottom_text_padding"
+            android:text="@{person.age}"
+            android:textSize="@dimen/profile_details_text_size"
+            app:layout_constraintBottom_toTopOf="@+id/profile_location_text"
+            tools:text="25 years" />
+
+        <TextView
+            android:id="@+id/profile_location_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/profile_bottom_text_padding"
+            android:paddingLeft="@dimen/profile_bottom_text_padding"
+            android:text="@{person.region}"
+            android:textSize="@dimen/profile_details_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="maasdriel, zeeland" />
+    </android.support.constraint.ConstraintLayout>
+</layout>
+
+
