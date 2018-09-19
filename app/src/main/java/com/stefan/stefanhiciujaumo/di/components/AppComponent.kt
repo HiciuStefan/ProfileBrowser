@@ -1,4 +1,4 @@
-package com.hypnoweb.hypnowebapp.di.components
+package com.stefan.stefanhiciujaumo.di.components
 
 import android.app.Application
 import com.stefan.stefanhiciujaumo.ProfileBrowserApp
