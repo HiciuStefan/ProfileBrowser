@@ -28,6 +28,9 @@ class CatalogViewModel @Inject constructor(private val catalogRepository: Catalo
     fun getNavigator(): CatalogNavigator {
         return catalogNavigator
     }
+
+    val errorState: ObservableBoolean = ObservableBoolean(false)
+
     fun addSubscriptions() {
         bag.add(catalogRepository.getCatalog()
                 .subscribeOn(Schedulers.io())
@@ -36,7 +39,13 @@ class CatalogViewModel @Inject constructor(private val catalogRepository: Catalo
                             this.catalog.set(catalog)
                             loading.set(false)
                         },
-                        { throwable -> Timber.e(throwable) }
+                        { throwable ->
+                            kotlin.run {
+                                loading.set(false)
+                                Timber.e(throwable)
+                                errorState.set(true)
+                            }
+                        }
                 )
         )
     }

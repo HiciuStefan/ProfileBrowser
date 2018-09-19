@@ -1,12 +1,10 @@
 package com.stefan.stefanhiciujaumo.ui.catalog
 
 import android.databinding.BindingAdapter
+import android.view.View
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
-import android.widget.AdapterView
-import android.widget.GridView
-import android.widget.ImageView
-import android.widget.ProgressBar
+import android.widget.*
 import com.squareup.picasso.Picasso
 import com.stefan.stefanhiciujaumo.R
 import com.stefan.stefanhiciujaumo.catalog.Catalog
@@ -31,6 +29,7 @@ fun setLoadingContentLoadingProgressBar(gridView: GridView?, catalog: Catalog?, 
 
     gridView?.let {
         catalog?.let {
+            gridView.visibility = VISIBLE
             gridView.adapter = GridViewAdapter(gridView.context, catalog)
             gridView.onItemClickListener = AdapterView.OnItemClickListener { parent, v, position, id ->
                 navigator.goToDetails(catalog.persons.get(position))
@@ -42,4 +41,17 @@ fun setLoadingContentLoadingProgressBar(gridView: GridView?, catalog: Catalog?, 
 @BindingAdapter("src")
 fun setImage(imageView: ImageView?, url: String?) {
     imageView?.let { Picasso.get().load(url).error(R.drawable.no_image).fit().into(imageView) }
+}
+
+@BindingAdapter("visibility")
+fun setImage(textView: TextView?, visible: Boolean?) {
+    textView?.let {
+        visible?.let {
+            textView.visibility = when (visible) {
+                true -> View.VISIBLE
+                else -> View.GONE
+
+            }
+        }
+    }
 }

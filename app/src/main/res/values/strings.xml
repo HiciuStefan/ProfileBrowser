@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">StefanHiciuJaumo</string>
+    <string name="failure_catalog_message">It would seem there\'s nobody out there....</string>
 </resources>
