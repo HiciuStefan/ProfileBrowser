@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="catalog_person_text_size">20sp</dimen>
+    <dimen name="catalog_person_text_padding">12dp</dimen>
+    <dimen name="catalog_person_profile_size">250dp</dimen>
+    <dimen name="catalog_progressbar_size">50dp</dimen>
+</resources>

@@ -7,6 +7,6 @@ import retrofit2.http.Query
 
 interface CatalogApi {
 
-    @GET("/api")
+    @GET("/api?ext")
     fun getCatalog(@Query("amount") amount: Int): Single<List<PersonNetwork>>
 }

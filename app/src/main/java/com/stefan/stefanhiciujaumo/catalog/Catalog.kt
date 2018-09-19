@@ -1,4 +1,4 @@
 package com.stefan.stefanhiciujaumo.catalog
 
 
-public class Catalog(persons: List<Person>)
+public class Catalog(val persons: List<Person>)

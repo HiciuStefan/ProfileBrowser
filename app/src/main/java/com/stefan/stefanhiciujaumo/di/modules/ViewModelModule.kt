@@ -2,8 +2,8 @@ package com.stefan.stefanhiciujaumo.di.modules
 
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider
-import com.stefan.stefanhiciujaumo.catalog.CatalogViewModel
 import com.stefan.stefanhiciujaumo.di.annotations.ViewModelKey
+import com.stefan.stefanhiciujaumo.ui.catalog.CatalogViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap

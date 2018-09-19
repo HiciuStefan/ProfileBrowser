@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.stefan.stefanhiciujaumo.ui.catalog.CatalogViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark">
+
+        <ProgressBar
+            android:layout_width="@dimen/catalog_progressbar_size"
+            android:layout_height="@dimen/catalog_progressbar_size"
+            android:layout_centerInParent="true"
+            app:loading="@{viewModel.loading}"
+            tools:visibility="gone" />
+
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:horizontalSpacing="2dp"
+            android:numColumns="2"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="2dp"
+            app:catalog="@{viewModel.catalog}"
+            app:navigator="@{viewModel.getNavigator}" />
+
+    </RelativeLayout>
+
+
+</layout>
