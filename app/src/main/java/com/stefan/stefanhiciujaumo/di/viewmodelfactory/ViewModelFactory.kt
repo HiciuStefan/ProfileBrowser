@@ -1,4 +1,4 @@
-package com.hypnoweb.hypnowebapp.di.ViewModelFactory
+package com.stefan.stefanhiciujaumo.di.modules
 
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider
