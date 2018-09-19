@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="catalog_person_text_size">20sp</dimen>
-    <dimen name="profile_details_text_size">20sp</dimen>
-    <dimen name="profile_person_name_text_size">24sp</dimen>
     <dimen name="catalog_person_text_padding">12dp</dimen>
     <dimen name="catalog_person_profile_size">250dp</dimen>
     <dimen name="catalog_progressbar_size">50dp</dimen>
     <dimen name="profile_bottom_text_padding">20dp</dimen>
     <dimen name="profile_left_text_padding">15dp</dimen>
+    <dimen name="profile_person_name_text_size">32sp</dimen>
+    <dimen name="profile_details_text_size">26sp</dimen>
 </resources>

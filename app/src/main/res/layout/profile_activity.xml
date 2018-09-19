@@ -28,7 +28,9 @@
             android:layout_height="wrap_content"
             android:paddingLeft="@dimen/profile_bottom_text_padding"
             android:text="@{person.username}"
+            android:textColor="@color/color_white"
             android:textSize="@dimen/profile_person_name_text_size"
+            android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/profile_years_text"
             tools:text="lazyduck408" />
 
@@ -38,6 +40,7 @@
             android:layout_height="wrap_content"
             android:paddingLeft="@dimen/profile_bottom_text_padding"
             android:text="@{person.age}"
+            android:textColor="@color/color_white"
             android:textSize="@dimen/profile_details_text_size"
             app:layout_constraintBottom_toTopOf="@+id/profile_location_text"
             tools:text="25 years" />
@@ -49,6 +52,7 @@
             android:paddingBottom="@dimen/profile_bottom_text_padding"
             android:paddingLeft="@dimen/profile_bottom_text_padding"
             android:text="@{person.region}"
+            android:textColor="@color/color_white"
             android:textSize="@dimen/profile_details_text_size"
             app:layout_constraintBottom_toBottomOf="parent"
             tools:text="maasdriel, zeeland" />
