@@ -15,10 +15,7 @@ import org.mockito.Mockito.mock
  */
 class CatalogRepositoryTest {
 
-    @Mock
     var catalogApi: CatalogApi = mock(CatalogApi::class.java)
-
-    @Mock
     var catalogMpapper: CatalogMapper = mock(CatalogMapper::class.java)
 
     val catalogRepository: CatalogRepository

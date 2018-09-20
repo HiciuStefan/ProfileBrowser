@@ -9,10 +9,14 @@ class CatalogMapper @Inject constructor() {
         val personList: MutableList<Person> = ArrayList()
         networkPersons.forEach {
             personList.add(
-                    Person((it.name ?: "No name") + " " + (it.surname ?: "abcd"),
+                    Person(when (it.name) {
+                        null -> it.surname ?: "No name provided"
+                        else -> (it.name) + " " + (it.surname ?: "")
+                    },
                             it.region ?: "No region provided",
                             it.age?.let { it.toString() + " years" } ?: "Unknown age",
-                            it.gender ?: "No gender provided", it.photo ?: ""))
+                            it.gender ?: "No gender provided",
+                            it.photo ?: ""))
         }
         return Catalog(personList)
     }

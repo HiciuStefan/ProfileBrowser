@@ -16,9 +16,9 @@ class CatalogViewModel @Inject constructor(private val catalogRepository: Catalo
     lateinit var catalogNavigator: CatalogNavigator
     var catalog: ObservableField<Catalog> = ObservableField()
 
-
     val bag: CompositeDisposable
     var loading = ObservableBoolean()
+    val errorState: ObservableBoolean = ObservableBoolean(false)
 
     init {
         bag = CompositeDisposable()
@@ -29,9 +29,9 @@ class CatalogViewModel @Inject constructor(private val catalogRepository: Catalo
         return catalogNavigator
     }
 
-    val errorState: ObservableBoolean = ObservableBoolean(false)
 
     fun addSubscriptions() {
+        loading.set(true)
         bag.add(catalogRepository.getCatalog()
                 .subscribeOn(Schedulers.io())
                 .subscribe(

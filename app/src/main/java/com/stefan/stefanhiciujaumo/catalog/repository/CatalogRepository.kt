@@ -12,7 +12,7 @@ import javax.inject.Inject
  */
 
 
-public class CatalogRepository @Inject constructor(private val catalogApi: CatalogApi,
+class CatalogRepository @Inject constructor(private val catalogApi: CatalogApi,
                                                    private val catalogMapper: CatalogMapper) {
     fun getCatalog(): Single<Catalog> {
         return catalogApi.getCatalog(500)
