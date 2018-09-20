@@ -16,10 +16,10 @@ import org.mockito.Mockito.mock
 class CatalogRepositoryTest {
 
     @Mock
-    lateinit var catalogApi: CatalogApi
+    var catalogApi: CatalogApi = mock(CatalogApi::class.java)
 
     @Mock
-    lateinit var catalogMpapper: CatalogMapper
+    var catalogMpapper: CatalogMapper = mock(CatalogMapper::class.java)
 
     val catalogRepository: CatalogRepository
 
