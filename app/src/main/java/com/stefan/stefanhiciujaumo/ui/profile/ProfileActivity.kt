@@ -37,7 +37,6 @@ class ProfileActivity : DaggerAppCompatActivity(), Swipe {
         gestureDetectorCompat = GestureDetectorCompat(this, GestureListener(this))
     }
 
-    @Override
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         gestureDetectorCompat?.onTouchEvent(event)
         return super.onTouchEvent(event)
